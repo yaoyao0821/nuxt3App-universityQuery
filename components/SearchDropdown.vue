@@ -1,13 +1,14 @@
 <script setup>
-const countries = ['China', 'Japan', 'Canada']
-let country = ref(countries[0])
-let name = ref('')
+const countries = getCountriesLocalStorage()
+let country = useCountry()
+let name = useName()
+
 const searchRes = useSearchRes()
 const baseURL = 'http://universities.hipolabs.com/search'
 let startTime, endTime, responseTime = ref(0), responseCode = ref(200)
 
 async function fetchData() {
-    const { data } = await useFetch(baseURL, {
+    await useFetch(baseURL, {
         query: { country, name },
         onRequest({ request, options }) {
             startTime = (new Date()).getTime();

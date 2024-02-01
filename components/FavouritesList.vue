@@ -2,20 +2,7 @@
 
 const fav = useFav()
 
-const columns = [{
-  key: 'actions'
-}, {
-  key: 'name',
-  label: 'Name',
-  sortable: true
-}, {
-  key: 'state-province',
-  label: 'State/province',
-  sortable: true
-}, {
-  key: 'web_pages',
-  label: 'Website'
-}]
+const columns = tableColumns
 
 const page = ref(1)
 const pageCount = 10
@@ -24,19 +11,6 @@ const rows = computed(() => {
   return fav.value.slice((page.value - 1) * pageCount, (page.value) * pageCount)
 })
 
-function deleteInFav(row) {
-  if (fav.value && isInFav(row)) {
-    fav.value = fav.value.filter((item) => item.name != row.name);
-  }
-}
-
-function isInFav(row) {
-  if (fav.value) {
-    const index = fav.value.findIndex((item) => item.name === row.name)
-    return index < 0 ? false : true
-  }
-  return false
-}
 </script>
 
 <template>
