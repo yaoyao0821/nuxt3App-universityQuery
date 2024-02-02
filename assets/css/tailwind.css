@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn-submit {
+    @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700;
+}
+.main-content {
+    @apply max-h-fit max-w-[80vw] mx-auto 
+     flex flex-col bg-zinc-200 justify-center
+}
+.app-title {
+    @apply text-2xl my-4 self-center
+}
+
+.content {
+    @apply px-2
+}
+
+.search-page-header {
+    @apply flex flex-row justify-between flex-wrap
+}
+span .workbreak{
+    @apply break-all
+}
+.search-page-selection {
+    @apply flex flex-col
+}
+.search-page-dropdown, .search-page-select {
+    @apply max-w-[60%] min-w-fit
+}
+
+.select-page-results {
+    @apply max-h-fit max-w-[80vw]
+}
+
+.select-table{
+    @apply max-h-fit max-w-[80vw]
+}
+
+.pages {
+    @apply flex justify-end px-3 py-3.5 border-t border-gray-200 dark:border-gray-700
+}

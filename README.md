@@ -3,14 +3,14 @@
 ## Run in Docker-compose
 
 Make sure docker is running in your device.
-Then run in the command line:
+In the terminal go to `nuxtv3` folder, then run docker compose in the command line:
 
 ```bash
 # docker
 docker compose up
 ```
 
-It will take 2 mins to build.
+It will take around three mins to build.
 
 When there is a new image created and running, open the link in the browser:
 ```

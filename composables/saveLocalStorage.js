@@ -4,8 +4,7 @@ const saveLocalStorage = (key) => (val) => {
     }
 }
 
-export const saveFavLocalStorage = saveLocalStorage('fav')
-export const saveCountriesLocalStorage = saveLocalStorage('countries')
+export const saveFavLocalStorage = saveLocalStorage('nuxtv3app-fav')
 
 const getLocalStorage = (key) => () => {
     if (process.client) {
@@ -14,8 +13,7 @@ const getLocalStorage = (key) => () => {
     }
 }
 
-export const getFavLocalStorage = getLocalStorage('fav')
-export const getCountriesLocalStorage = getLocalStorage('countries')
+export const getFavLocalStorage = getLocalStorage('nuxtv3app-fav')
 
 
 

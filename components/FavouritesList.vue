@@ -16,9 +16,8 @@ const rows = computed(() => {
 <template>
   <span>
     <slot />
-    test
     <div>
-      <UTable :columns="columns" :rows="rows">
+      <UTable class="select-table" :columns="columns" :rows="rows">
         <template #actions-data="{ row }">
           <div>
             <UButton label="Delete" color="black"

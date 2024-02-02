@@ -1,10 +1,9 @@
 <template>
-  <section>
-    <NuxtLink to="/">Jump to Search Page</NuxtLink>
-
-    <p>此页面将显示在 /favourites 路由。</p>
-    <FavouritesList>
-    
-    </FavouritesList>
-  </section>
+  <div class="content">
+    <section>
+      <UButton to="/">Jump to Search Page</UButton>
+      <FavouritesList>
+      </FavouritesList>
+    </section>
+  </div>
 </template>
